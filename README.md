@@ -4,16 +4,16 @@
 
 # The Dual-use Dilemma in LLMs: Do Empowering Ethical Capacities Make a Degraded Utility?
 
-## Official Implement of LibraAlign
+## Official Implementation of LibraAlign
 
-Our code is built upon TRL on a single GeForce RTX 3090. The oprating system is Ubuntu 20.04.6 LTS.
+Our code is built upon TRL on a single GeForce RTX 3090. The operating system is Ubuntu 20.04.6 LTS.
 
 ## Installation
 ```bash
 pip install trl
 ```
 
-For more options, please refer to https://github.com/huggingface/trl.git. 
+For more references for historical context, please refer to https://github.com/huggingface/trl.git. 
 
 ## Quick Start
 
