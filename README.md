@@ -2,7 +2,7 @@
 <img src="https://github.com/YIYIZH/trl/blob/main/frame.png">
 </div>
 
-# The Dual-use Dilemma in LLMs: Do Empowering Ethical Capacities Make a Degraded Utility?
+# Reconciling Safety and Utility in Scientific Question Answering with Large Language Models
 
 ## Official Implementation of LibraAlign
 
