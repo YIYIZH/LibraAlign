@@ -1,5 +1,5 @@
 <div style="text-align: center">
-<img src="https://github.com/YIYIZH/trl/blob/main/frame.png">
+<img src="https://github.com/YIYIZH/LibraAlign/blob/main/frame.png">
 </div>
 
 # Reconciling Safety and Utility in Scientific Question Answering with Large Language Models
@@ -10,7 +10,10 @@ Our code is built upon TRL on a single GeForce RTX 3090. The operating system is
 
 ## Installation
 ```bash
-pip install trl
+git clone https://github.com/YIYIZH/LibraAlign.git
+cd LibraAlign
+pip install -e .
+pip install -r requirements.txt
 ```
 
 For more references for historical context, please refer to https://github.com/huggingface/trl.git. 
@@ -42,7 +45,7 @@ You can also download our trained SFT models from [here](https://drive.google.co
 **DPO:**
 
 ```bash
-accelerate launch trl/examples/research_projects/chemical_dpo/scripts/dpo_llama2.py \
+accelerate launch /examples/research_projects/chemical_dpo/scripts/dpo_llama2.py \
 	--model_name_or_path="sft/final_checkpoint" 
 ```
 Replace the ***model_name_or_path*** with your real path. You can also download our trained DPO models from [here](https://drive.google.com/drive/folders/1C6LCjJNlm3geGQrQ0tihNk6G_Ctn1zK1?usp=drive_link).
@@ -50,7 +53,7 @@ Replace the ***model_name_or_path*** with your real path. You can also download 
 **Merge:**
 
 ```bash
-python trl/examples/research_projects/stack_llama/scripts/merge_peft_adapter.py --base_model_name="meta-llama/Llama-2-7b-hf" --adapter_model_name="dpo_results/final_checkpoint/" --output_name="stack-llama-2-smiles"
+python /examples/research_projects/stack_llama/scripts/merge_peft_adapter.py --base_model_name="meta-llama/Llama-2-7b-hf" --adapter_model_name="dpo_results/final_checkpoint/" --output_name="stack-llama-2-smiles"
 ```
 Replace the ***adapter_model_name*** with your real path. You can also download the merged models in [TEXT](https://huggingface.co/frisky11/stack-llama-2) or [SMILES](https://huggingface.co/frisky11/stack-llama-2-smiles) mode.
 
@@ -58,18 +61,18 @@ Replace the ***adapter_model_name*** with your real path. You can also download 
 
 ***Test our method:***
 ```bash
-python trl/examples/research_projects/chemical_dpo/scripts/dpo_test.py # Please replace the model path with the real path of your DPO models.
+python /examples/research_projects/chemical_dpo/scripts/dpo_test.py # Please replace the model path with the real path of your DPO models.
 ```
 
 ***Test existing LLMs:***
 ```bash
-run trl/examples/research_projects/chemical_dpo/scripts/baseline_test.ipynb in Jupyter Notebook (Colab)
+run /examples/research_projects/chemical_dpo/scripts/baseline_test.ipynb in Jupyter Notebook (Colab)
 ```
 
 **Evaluation:**
 
 ```bash
-run trl/examples/research_projects/chemical_dpo/scripts/accuracy.ipynb in Jupyter Notebook (Colab)
+run /examples/research_projects/chemical_dpo/scripts/accuracy.ipynb in Jupyter Notebook (Colab)
 ```
 
 ## Demo samples with results
