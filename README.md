@@ -10,10 +10,7 @@ Our code is built upon TRL on a single GeForce RTX 3090. The operating system is
 
 ## Installation
 ```bash
-git clone https://github.com/YIYIZH/LibraAlign.git
-cd LibraAlign
-pip install -e .
-pip install -r requirements.txt
+pip install trl
 ```
 
 For more references for historical context, please refer to https://github.com/huggingface/trl.git. 
